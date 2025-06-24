@@ -91,11 +91,11 @@ export const Form = ({ data, setData, updateDataAPI, setUpdateDataAPI }) => {
             <form onSubmit={handleFormSubmit}>
                 <div>
                     <label htmlFor="title"></label>
-                    <input onChange={handleInputChange} value={addData.title} type="text" autoComplete="off" id="title" name="title" placeholder="Add Title" />
+                    <input required onChange={handleInputChange} value={addData.title} type="text" autoComplete="off" id="title" name="title" placeholder="Add Title" />
                 </div>
                 <div>
                     <label htmlFor="body"></label>
-                    <input onChange={handleInputChange} value={addData.body} type="text" autoComplete="off" id="body" name="body" placeholder="Add Post" />
+                    <input required onChange={handleInputChange} value={addData.body} type="text" autoComplete="off" id="body" name="body" placeholder="Add Post" />
                 </div>
                 <button type="submit" value={isEmpty ? "Add" : "Edit"} >{isEmpty ? "Add" : "Edit"}</button>
             </form>
