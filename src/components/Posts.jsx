@@ -23,6 +23,11 @@ export const Posts = () => {
     //function to delete post
     const handleDeletePost = async (id) => {
         try {
+            let confirmDelete = window.confirm("Are you sure you want to delete this post?");
+            if (!confirmDelete) {
+                return;
+            }
+
             const res = await deletePost(id);
             if (res.status === 200) {
                 const newDataPost = data.filter((curPost) => {
